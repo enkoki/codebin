@@ -2,31 +2,22 @@
 #include <math.h>
 
 int main(){
-    int num, rem, sum = 0, count = 0, cube;
-    printf("Enter any number: ");
+   int num;
+   int product = 1;
+   printf("Enter number: ");
+   scanf("%d", &num);
+   while(num<0){
+    printf("Invalid input. Please enter again.\n");
     scanf("%d", &num);
-    int temp = num;
-    while(num != 0){
-        num /= 10;
-        count++;
+   }
+   if(num == 0){
+    printf("Factorial is 1");
+   }
+   else{
+    for(int i = 1;i<=num;i++){
+        product *= i;
     }
-    num = temp;
-    while(num != 0)
-    {
-        cube = 1;
-        rem = num % 10;
-        for(int i = 1; i<=count;i++){
-            cube = cube*rem;
-        }
-        sum = sum + cube;
-        num /= 10;
-    }
-
-    if(temp == sum){
-        printf("%d is an armstrong number.", temp);
-    }
-    else{
-        printf("%d is not an armstrong number.", temp);
-    }
-    return 0;
+    printf("Factorial of %d is %d.", num, product);
+   }
+   return 0;
 }

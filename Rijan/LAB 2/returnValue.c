@@ -4,8 +4,8 @@
 int main(){
     int num;
     printf("Enter any number: ");
-    int is_digit = scanf("%d", &num);
-    if(is_digit){
+    // int is_digit = scanf("%d", &num);
+    if(scanf("%d", &num)){
         printf("\nA valid integer was entered by the user.");
     } 
     else{

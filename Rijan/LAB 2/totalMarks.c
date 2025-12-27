@@ -11,8 +11,6 @@ int main(){
             if(marks[i]<0 || marks[i]>80) printf("Invalid please enter again\n");
             else break;
         }
-    }
-    for(int i = 0;i<5;i++){
         total += marks[i];
     }
     float per = ((float)total/400)*100;
